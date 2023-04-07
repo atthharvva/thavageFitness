@@ -1,0 +1,867 @@
+.slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    width: auto;
+    padding: 6px;
+    color: orange;
+    font-size: 22px;   
+    align-content: center; 
+}
+
+.numbertext {
+    color: orange;
+    font-size: 20px;
+    padding: 22px;
+    position: absolute;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.logo {
+    font-style: normal;
+    display: inline-block;
+    position: absolute;
+    left: 100px;
+    top: 5px;
+    text-align: right;
+}
+/*.dot {
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    display: inline-block;
+    background-color: blue;
+    border-radius: 50%;
+    top: 0;
+}*/
+
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: orange;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: orange;
+}
+
+a:active, a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+/*a:hover::after {
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}*/
+
+.left {
+    position: absolute;
+    left: 30px;
+    /*border: 2px green;*/
+    /*border-width: 180px;*/
+    top: 10px;
+    display: inline-block;
+    
+}
+.left img {
+    width: 120px;
+    filter: invert(100%);
+}
+
+/* .left:hover {
+    background-color: rgb(47, 44, 44);
+}  */
+
+.mid {
+    width: 250px;
+    margin: 15px auto;
+    display: block;
+    position: relative;
+    left: -100px;
+    /*border: 2px solid green;
+    text-align: center;*/
+}
+
+.right {
+    color: orange;
+    position: absolute;
+    right: 130px;
+    top: 19px;
+    display: inline-block;
+}
+
+.rright {
+    position: absolute;
+    display: inline-block;
+    top: 18px;
+    right: 40px;
+    font-size: medium;
+    
+}
+
+.navbar {
+    white-space: nowrap;
+}
+
+.navbar1{
+    display: inline-block;
+    word-spacing: 25px;
+}
+
+/* .navbar1:hover {
+    background-color: rgb(47, 44, 44);
+} */
+
+footer {
+    background-color: rgb(47, 44, 44);
+}
+
+.fleft {
+    position: relative;
+    left: 50px;
+    /*border: 2px green;*/
+    /*border-width: 180px;*/
+    top: 30px;
+    cursor: text;
+
+}
+
+.fright {
+    color: orange;
+    position: relative;
+    left: 1150px;
+    top: -130px;
+    display: inline-block;
+}
+
+.p1 {
+    text-align: center;
+    word-spacing: 4px;
+    font-size:x-large;
+    top: -20px;
+}
+
+.p2 {
+    font-size: xx-large;
+}
+
+.bleft {
+    position: relative;
+    left: 30px;
+    /*border: 2px green;*/
+    /*border-width: 180px;*/
+    top: -20px;
+}
+
+.bright {
+    position: absolute;
+    left: 1150px;
+    top: 915px;
+    display: inline-block;
+}
+
+.leftmid {
+    width: 250px;
+    margin: 15px auto;
+    position: absolute;
+    top: 895px;
+    left: 425px;
+    /*border: 2px solid green;
+    text-align: center;*/
+}
+
+.rightmid {
+    width: 250px;
+    margin: 35px auto;
+    position: absolute;
+    left: 805px;
+    top: 880px;
+    /*border: 2px solid green;
+    text-align: center;*/
+}
+
+/* .bleft:hover {
+    border: 2px solid rgb(47, 44, 44);
+    z-index: 10;
+  } */
+  
+.nutext {
+    position: absolute;
+    left: 80px;
+}
+
+.opentext {
+    position: absolute;
+    left: 110px;
+}
+
+.parktext {
+    position: absolute;
+    left: 90px;
+}
+
+.hygtext {
+    position: absolute;
+    left: 80px;
+}
+
+.open-button {
+    background-color: rgb(0, 0, 0);
+    color: orange;
+    padding: 16px, 20px;
+    cursor: pointer;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border: 3px solid black;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    height: 320px;
+    padding: 10px;
+    background-color:rgb(47, 44, 44);
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 65%;
+    padding: 15px;
+    border: none;
+    background: rgb(47, 44, 44);
+    margin: 5px 0 22px 0;
+    color: orange;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: white;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    width: 47%;
+    height: 35px;            
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.btnspace {
+    word-spacing: 7px;
+}
+
+.thead {
+    position: absolute;
+    top: 1225px;
+    left: 630px;
+    /* background-color:rgb(47, 44, 44) */
+}
+
+.t1:hover {
+    background-color: rgb(47, 44, 44);
+    z-index: 10;
+  }
+  
+
+.t1img {
+    position: relative;
+    left: 20px;
+    top: 50px;
+
+}
+
+.t1 img {
+    border: 7px solid orange;
+}
+
+.bleft img {
+    border: 5px solid orange;
+}
+
+.leftmid img {
+    border: 5px solid orange;
+}
+
+.rightmid img {
+    border: 5px solid orange;
+}
+
+.bright img {
+    border: 5px solid orange;
+}
+
+.t1head {
+    position: relative;
+    left: 330px;
+    bottom: 450px;
+}
+
+.t1ig {
+    position: absolute;
+    left: 330px;
+    top: 500px;
+
+}
+
+.map {
+    position: absolute;
+    top: 800px;
+    left: 100px;
+    color: orange;
+}
+
+.t1p {
+    position: absolute;
+    left: 330px;
+    top: 250px;
+    /*border: 3px solid green;*/
+}
+
+.t2img {
+    position: relative;
+    left: 790px;
+    top: 840px;
+}
+
+.t2 img {
+    border: 7px solid orange;
+}
+
+.t2head {
+    position: absolute;
+    left: 650px;
+    top: 850px;
+    cursor: text;
+}
+
+.t2link {
+    position: absolute;
+    left: 830px;
+    top: 1760px;
+}
+
+.t2p {
+    position: relative;
+    left: -200px;
+    top: 540px;
+    text-align: right;
+    /*border: 3px solid green;*/
+    border-width: 10px;
+    padding-right: 220px;
+    cursor: text;
+}
+
+.signup-button {
+    background-color: rgb(0, 0, 0);
+    color: orange;
+    padding: 16px, 20px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: orange;
+    color: black;
+}
+
+.open-button:hover {
+    background-color: orange;
+    color: black;
+}
+
+.signup-popup {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    border: 3px solid black;
+    z-index: 9;
+}
+
+.form-container1 {
+    width: 500px;
+    height: 525px;
+    padding: 10px;
+    background-color:rgb(47, 44, 44);
+}
+
+.form-container1 input[type=text], .form-container1 input[type=number] , .form-container1 input[type=password] {
+    width: 65%;
+    padding: 15px;
+    border: none;
+    background: rgb(47, 44, 44);
+    margin: 5px 0 22px 0;
+    color: orange;
+}
+
+.form-container1 input[type=text]:focus, .form-container1 input[type=number]:focus, .form-container1 input[type=password]:focus {
+    background-color: white;
+    outline: none;
+}
+
+.form-container1 .btn {
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+    width: 47%;
+    height: 35px;            
+}
+
+.form-container1 .cancel {
+    background-color: red;
+    width: 40%;
+    height: 35px;
+}
+
+.form-container1 .btns {
+    width: 40%;
+    height: 32px;
+}
+
+.btnspace1 {
+    word-spacing: 90px;
+    width: 100%;
+}
+
+.rehead {
+    position: relative;
+    left: 700px;
+}
+
+.r1 {
+   background-color: rgb(47, 44, 44);
+   width: 700px;
+   height: 350px;
+   /*padding-left: 25px;*/
+   position: absolute;
+   top: 2020px;
+   left: 50px;
+}
+
+.r1 img {
+    border-radius: 90%;
+    padding: 20px;
+}
+
+.r1title {
+    position: relative;
+    left: 170px;
+    top: -220px;
+}
+
+.r1body {
+    position: relative;
+    left: 170px;
+    top: -190px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.r1:hover {
+    background-color: orange;
+    color: black;
+}
+  
+.r1rev {
+    position: relative;
+    left: 170px;
+    top: -150px;
+}
+
+.r2:hover {
+    background-color: orange;
+    color: black;
+}
+
+.r2 {
+    background-color: rgb(47, 44, 44);
+    width: 700px;
+    height: 350px;
+    /*padding-left: 25px;*/
+    position: absolute;
+    top: 2020px;
+    left: 800px;
+ }
+ 
+ .r2 img {
+     border-radius: 90%;
+     padding: 20px;
+ }
+ 
+ .r2title {
+     position: relative;
+     left: 170px;
+     top: -220px;
+ }
+ 
+ .r2body {
+     position: relative;
+     left: 170px;
+     top: -190px;
+ }
+ 
+ .r2rev {
+     position: relative;
+     left: 960px;
+     top: 300px;
+ }
+ .material-symbols-outlined1 {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  /* .mySlides1 {
+    display: none;
+  }
+  
+  /* Show the first slide by default */
+  /* .mySlides1:first-child {
+    display: block;
+  } */
+  /* Global styles */
+/* body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 40px;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* Membership options styles */
+  /* ul.membership-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .membership-option {
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .membership-option h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .membership-option ul {
+    margin-left: 0;
+  }
+  
+  .membership-option li {
+    list-style: none;
+  }
+  
+  .membership-option .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .membership-option .cta-button {
+    background-color: #00bfff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .membership-option .cta-button:hover {
+    background-color: #0080ff;
+  }
+  
+  @media (max-width: 767px) {
+    .membership-option {
+      width: 100%;
+    }
+  } */
+.basic {
+    background-color: rgb(47, 44, 44);
+    position: relative;
+    width: 700px;
+    left: 350px;
+}
+
+.basicText {
+    position: absolute;
+    left: 200px;
+    top: 120px;
+}
+
+.cta-button {
+    position: absolute;
+    left: 520px;
+    top: 280px;
+}
+
+.basic img {
+    border-radius: 90%;
+    padding: 20px;
+}
+
+.premium img {
+    border-radius: 90%;
+    padding: 20px;
+}
+
+.premium {
+    background-color: rgb(47, 44, 44);
+    position: relative;
+    width: 700px;
+    left: 350px;
+}
+
+.premiumText {
+    position: absolute;
+    left: 200px;
+    top: 120px;
+}
+
+.cta-button1 {
+    position: absolute;
+    left: 520px;
+    top: 280px;
+}
+
+.family {
+    background-color: rgb(47, 44, 44);
+    position: relative;
+    width: 700px;
+    left: 350px;
+}
+
+.family img {
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.familyText {
+    position: absolute;
+    left: 200px;
+    top: 120px;
+}
+
+.cta-button2 {
+    position: absolute;
+    left: 520px;
+    top: 280px;
+}
+
+.benefits {
+    background-color: rgb(47, 44, 44);
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+
+.membershipText {
+    position: absolute;
+    left: 580px;
+    top: 50px;
+}
+
+/* .nvbr li:hover {
+    background-color: orange !important;
+}
+  
+.nvbr li:hover a {
+    color: black !important;
+} */
+
+.nvbr {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nvbr li {
+    display: inline-block;
+}
+  
+.nvbr li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: orange;
+}
+  
+.nvbr li a:hover {
+    background-color: orange;
+    color: black;
+}
+  
+.membership-options li:hover {
+    background-color: orange;
+    color: black;
+} 
+  
+.cta-button2:hover {
+    color:  rgb(47, 44, 44);
+}
+
+.cta-button1:hover {
+    color:  rgb(47, 44, 44);
+}
+
+.cta-button:hover {
+    color:  rgb(47, 44, 44);
+}
+
+.cardio {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.ctext {
+    position: relative;
+    left: 420px;
+    top: -230px;
+}
+
+.row img{
+    border-radius: 90%;
+    position: relative;
+    left: 50px;
+}
+
+.weights {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.wtext {
+    position: relative;
+    left: 420px;
+    top: -200px;
+}
+
+.fweights {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.mtext {
+    position: relative;
+    left: 420px;
+    top: -200px;
+}
+
+.group {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.gtext {
+    position: relative;
+    left: 420px;
+    top: -200px;
+}
+
+.pt {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.ptext {
+    position: relative;
+    left: 420px;
+    top: -200px;
+}
+
+.sauna {
+    position: relative;
+    background-color: rgb(47, 44, 44);
+    width: 750px;
+    left: 350px;
+    height: 300px;
+}
+
+.stext {
+    position: relative;
+    left: 420px;
+    top: -200px;
+}
+
+.cardio:hover, .weights:hover, .fweights:hover, .group:hover, .pt:hover, .sauna:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}

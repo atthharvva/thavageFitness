@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thavage Fitness</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script type="text/javascript" src="jsstyle.js"></script>
+    <script src = "angular.min.js"></script>
+    <style>
+
+    </style>
+    <body>
+        <div class="navbar">
+            <div class="left">
+                <img src="logo.png" alt="">
+                <div class="logo">
+                    <a href="thavage.html" class="active"><h1>Thavage Fitness</h1></a>
+                </div>
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <h2 class="navbar1">
+                        <!-- <a href="thavage.html" class="active">Home</a>
+                        <a href="membership.html"> Memberships</a>
+                        <a href="#"> Facilities</a>
+                        <a href="records.html"> Records</a> -->
+                        <nav>
+                            <ul class="nvbr">
+                                <li>
+                                    <a href="thavage.html" class="active">Home</a>
+                                </li>
+                                <li>
+                                    <a href="membership.html">Memberships</a>
+                                </li>
+                                <li>
+                                    <a href="facilities.html">Facilities</a>
+                                </li>
+                                <li>
+                                    <a href="records.php">Records</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </h2>
+                </div>
+            </div>
+            <div class="right">
+                <button class="signup-button" onclick="openForm1()"><h2>Join Now</h2></div>
+            </div>
+            <div class="signup-popup" id="myForm1">
+                <form action="details_entry.php" name="myForm1"  onsubmit="return validateForm()" method="post" class="form-container1">
+                    <h2>Join Now</h2>
+
+                    <label for="fname"><b>Name</b></label>
+                    <input type="text" placeholder="Enter First Name" name="full_name" required>
+                    <div class="error" id="nameErr"></div>
+                    <!-- <br>
+                    <label for="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Enter Last Name" name="lname" required>
+                    <div class="error" id="lnameErr"></div> -->
+                    
+                    <label for="contact"><b>Contact Number</b></label>
+                    <input type="text" placeholder="Enter Contact Number" name="contact" maxlength="10" required>
+                    <div class="error" id="contactErr"></div>
+                    
+                    <label for="age"><b>Age</b></label>
+                    <input type="text" placeholder="Enter Age" name="age" maxlength="2" required>
+                    <div class="error" id="ageErr"></div>
+                    
+                    <label for="sex"><b>Gender</b></label>
+                    <div class="form-inline">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                    <!-- <input type="text" placeholder="Enter Gender" name="sex" maxlength="1" required> -->
+                    <div class="error" id="sexErr"></div>
+                    
+                    <label for="emaill"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="emaill" required>
+                    <div class="error" id="emailErr"></div>
+                    
+                    <label for="passs"><b>Create Password</b></label>
+                    <input type="password" placeholder="Create Password" name="passs" required>
+
+                    <br>
+                    <div class="btnspace1">
+                        <button type="Submit" class="btns" name="save">Join Now</button>
+                        <button type="Button" class="btns cancel" onclick="closeForm1()">Close</button>
+                    </div>
+                    
+                </form>
+            </div>            
+            <div class="rright">
+                <button class="open-button" onclick="openForm()"><h2>Log In</h2></button>
+            </div>
+            <div class="form-popup" id="myForm" ng-app="myApp" ng-controller="myCont">
+                <form name="myForm" action="/action_page.php" class="form-container">
+                    <h2>Login</h2>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="mail" required>
+                    <div class="error" id="eemailErr"></div>
+                    <br>
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" id="pas" required>
+                    <div class="error" id="pasErr"></div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="btnspace">
+                        <button type="Submit" class="btn" onclick="validate()">Login</button>
+                        <button type="Button" class="btn cancel" onclick="closeForm()">Close</button>
+                        <div class="error" id="passErr"></div>
+                    </div>
+                    
+                </form>
+                <!-- <form name="myForm" action="/action_page.php" class="form-container" ng-submit="submitForm()" novalidate>
+                    <h2>Login</h2>
+                  
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" ng-model="emailv" ng-required="true" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" />
+                    <div class="error" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                      <span ng-show="myForm.email.$error.required">Email is required.</span>
+                      <span ng-show="myForm.email.$error.pattern">Invalid email format.</span>
+                    </div>
+                  
+                    <br>
+                  
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" ng-model="passv" ng-required="true" />
+                    <div class="error" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+                      <span ng-show="myForm.pass.$error.required">Password is required.</span>
+                    </div>
+                  
+                    <br>
+                    <br>
+                    <br>
+                  
+                    <div class="btnspace">
+                      <button type="submit" class="btn" ng-disabled="myForm.$invalid">Login</button>
+                      <button type="button" class="btn cancel" on-click="closeForm()">Close</button>
+                    </div>
+                  </form> -->
+                  
+                
+            </div>
+            <br>
+            <div class="slideshow">
+                <div class="mySlides">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="background.png" style="width:100%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="background2.png" style="width:100%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="background3.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+
+              <div class="p1">
+                <p>Experience The Fitness Wave At<br>Navi Mumbai's Friendliest Gym</p><br>
+                <div class="p2">
+                    <a onclick="openForm1()">Join Thavage Fitness Fitness Today</a><br><br>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="bleft">
+                <img src="nutrition.png" style="width: 20%;">
+                <div class="nutext">In-House Nutritionists</div>
+              </div>
+              <div class="leftmid">
+                <img src="open.png" style="width: 125%;" style="height: 90%;", style="border: 5px solid orange;">
+                <div class="opentext">Open 7-Days a Week<br> From 5am To 12pm</div>
+              </div>
+              <div class="rightmid">
+                <img src="parking.png" style="width: 120%;">
+                <div class="parktext">Ample Parking Space<br>All Day Round</div>
+              </div>
+              <div class="bright">
+                <img src="hygeine.png" style="width: 80%;">
+                <div class="hygtext">Clean and Safe Equiments</div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <div class="trainers">
+                <div class="thead"><h1>Meet Our Trainers</h1></div>
+                <div class="t1">
+                    <div class="t1img">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <img src="t1.jpg" style="width: 20%;">
+                        <div class="t1head">
+                            <h2>Chris Bumstead</h2>
+                        </div>
+                        <div class="t1p">Christopher Adam Bumstead is a Canadian<br>IFBB professional bodybuilder. Bumstead is the<br>reigning Mr. Olympia Classic Physique winner, having<br>won the competition in 2019, 2020, 2021 and 2022.<br> He was also the runner-up in 2017 and<br>2018. He is often referred to by his nickname<br>Cbum. </div>
+                        <div class="t1link">
+                            <a class="t1ig" href="#">Instagram: www.instagram.com/cbum</div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="t2">
+                    <div class="t2img">
+                        <img src="t2.jpg" style="width: 29%;">
+                    </div>
+                    <div class="t2head">
+                        <h2>David Laid</h2>
+                    </div>
+                    <div class="t2p">David Laid is an American-based bodybuilder,<br>fitness model, and influencer. He is famous for<br> his body's transformation on YouTube videos. David<br>Laid was once the subject of mockery in school<br>due to his skinny body. This is one of the<br>reasons he focused on illuminating his life and<br>became one of the best bodybuilders on YouTube.<br>Millions follow Laid's social media accounts<br>because of his insightful workout routine.</div>
+                    <div class="t2link">
+                        <a class="t2ig" href="#">Instagram: www.instagram.com/davidlaid
+                    </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="review">
+                <div class="rehead"><h1>Reviews</h1></div>
+                <div class="r1">
+                    <br>
+                    <br>
+                    <div class="r1img">
+                        <img src="r1.jpg" style="width: 15%;">
+                    </div>
+                    <div class="r1title">
+                        <h2>Abhiram Ch</h2>
+                    </div>
+                    <div class="r1body">The biggest gym in kharghar. Amazing facility, latest international equipments<br> and great ambience. Good service with friendly staff and super clean and<br> comfortable gym for everyone from beginners to professional athletes to train at<br>Excellent personal training.Trainers who really care and go above and beyond to<br> help you achieve your goals.</div>
+                    <div class="r1rev">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                </div>
+                <div class="r2">
+                    <br>
+                    <br>
+                    <div class="r2img">
+                        <img src="r2.jpg" style="width: 15%;">
+                    </div>
+                    <div class="r2title">
+                        <h2>Bhavya Chopra</h2>
+                    </div>
+                    <div class="r2body">Amazing gym for workout, the ambiance is pretty motivating & the trainers<br> are very helpful as well. The equipment is good to work with and the crowd is<br>very sophisticated.</div>
+                    </div>
+                    <div class="r2rev">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+    </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="fleft">
+            Address:<br>
+            NMIMS Navi Mumbai<br>
+            Kharghar-410210<br>
+            Maharashtra<br><br><br><br><br>
+            <div class="smap">Show on Map</div>
+        </div>
+        <div class="fright">
+            <a href="#">Instagram: www.instagram.com/thavagefitness</a><br><br>
+            <a href="#">Facebook: www.facebook.com/thavagefitness</a><br><br>
+            <p>Contact us: 9988776655,1122334455</p>
+        </div>
+    </footer>
+    
+</html>
+
